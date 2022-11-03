@@ -1,12 +1,37 @@
-countDown (10, "status");
+const countdown = document.querySelector(".countdown");
+document.querySelector(".countdown").style.color = "darkgreen";
 
-function countDown (sec, elem) {
-    var element = document.getElementById(elem);
-    element.innerHTML = "Countdown "+sec+"";
-    if (sec < 1) {
-        clearTimeout (timer);
-        element.innerHTML = '<h1>Happy Independence Day</h1>';
-    } 
-    sec --;
-    var timer = setTimeout('countDown('+sec+', "'+elem+'")', 1000);
-}
+let time = 10;
+
+countdown.innerHTML = time--;
+setTimeout(() => {
+  countdown.innerHTML = time--;
+  setTimeout(() => {
+    countdown.innerHTML = time--;
+    setTimeout(() => {
+      countdown.innerHTML = time--;
+      setTimeout(() => {
+        countdown.innerHTML = time--;
+        setTimeout(() => {
+          countdown.innerHTML = time--;
+          setTimeout(() => {
+            countdown.innerHTML = time--;
+            setTimeout(() => {
+              countdown.innerHTML = time--;
+              setTimeout(() => {
+                countdown.innerHTML = time--;
+                setTimeout(() => {
+                  countdown.innerHTML = time--;
+                  setTimeout(() => {
+                    countdown.innerHTML = time--;
+                    countdown.innerHTML = `Happy Independence Day`;
+                  }, 1000);
+                }, 1000);
+              }, 1000);
+            }, 1000);
+          }, 1000);
+        }, 1000);
+      }, 1000);
+    }, 1000);
+  }, 1000);
+}, 1000);
